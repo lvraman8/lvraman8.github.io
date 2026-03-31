@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #222;
+      background: #fff;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .wrapper {
+      display: flex;
+      min-height: 100vh;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .sidebar {
+      width: 240px;
+      flex-shrink: 0;
+      padding: 48px 28px 48px 32px;
+      border-right: 1px solid #e5e5e5;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #dbeafe;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+    .sidebar h1 { font-size: 1.2rem; font-weight: bold; margin-bottom: 4px; }
+    .sidebar .role { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 20px; }
+    .sidebar-links { list-style: none; font-size: 0.85rem; text-align: left; }
+    .sidebar-links li { margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .sidebar-links li::before { content: "→"; color: #aaa; }
+    .main { flex: 1; padding: 0 40px 80px; }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 10;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .tabs a {
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-family: Arial, sans-serif;
+      color: #666;
+      text-decoration: none;
+      border-radius: 99px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .tabs a:hover { color: #2563eb; background: #eff6ff; }
+    .section {
+      margin-bottom: 40px;
+      padding-top: 40px;
+      scroll-margin-top: 60px;
+    }
+    .section p { margin-bottom: 12px; }
+    .news-list { list-style: none; }
+    .news-list li { display: flex; gap: 16px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; }
+    .news-date { color: #888; white-space: nowrap; width: 90px; flex-shrink: 0; }
+    .project-list { list-style: none; }
+    .project-list li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; }
+    .project-list li strong { display: block; margin-bottom: 2px; font-size: 1rem; }
+    @media (max-width: 640px) {
+      .wrapper { flex-direction: column; }
+      .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e5e5e5; padding: 32px 24px; height: auto; position: static; }
+      .main { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <aside class="sidebar">
+    <div class="avatar">🧑‍💻</div>
+    <h1>Your Full Name</h1>
+    <p class="role">
+      MSc Student<br/>
+      Department of Something<br/>
+      University of Toronto
+    </p>
+    <ul class="sidebar-links">
+      <li><a href="mailto:you@mail.com">Email</a></li>
+      <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
+      <li><a href="https://github.com/yourusername">GitHub</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <nav class="tabs">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+    </nav>
+
+    <div class="section" id="about">
+      <h2>About</h2>
+      <p>Write a short introduction here — who you are, what you study or work on,
+      and what you're passionate about. Two or three sentences is plenty.</p>
+      <p>You can add a second paragraph for more detail — your research interests,
+      industry experience, or what you're looking for next.</p>
+    </div>
+
+    <div class="section" id="news">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">Mar 2026</span>
+          <span>Started my new role at Acme Corp as a research intern.</span>
+        </li>
+        <li>
+          <span class="news-date">Jan 2026</span>
+          <span>Paper accepted at the Annual Conference on Something.</span>
+        </li>
+        <li>
+          <span class="news-date">Sep 2025</span>
+          <span>Started my MSc program at the University of Toronto.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li>
+          <strong><a href="#">Project One Title</a></strong>
+          A one-sentence description of what this project does or why it matters.
+        </li>
+        <li>
+          <strong><a href="#">Project Two Title</a></strong>
+          A one-sentence description of what this project does or why it matters.
+        </li>
+        <li>
+          <strong><a href="#">Project Three Title</a></strong>
+          A one-sentence description of what this project does or why it matters.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section" id="education">
+      <h2>Education</h2>
+      <ul class="project-list">
+        <li>
+          <strong>MSc, Your Field — University of Toronto</strong>
+          2023 – present
+        </li>
+        <li>
+          <strong>BSc, Your Field — Your Undergrad University</strong>
+          2019 – 2023
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
